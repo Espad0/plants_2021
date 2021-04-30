@@ -106,6 +106,6 @@ class Rescale(object):
 
         new_h, new_w = int(new_h), int(new_w)
 
-        img = transform.resize(image, (new_h, new_w))
+        img = cv2.resize(image, (new_h, new_w))/255.
 
         return {'image': img, 'label': label}
